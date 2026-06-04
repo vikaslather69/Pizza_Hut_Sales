@@ -1,0 +1,27 @@
+-- determine the distribution of orders by hour of the day.
+
+use pizzahut;
+
+select hour(order_time) as hour, count(order_id) as order_count
+from orders
+group by hour;
+
+
+-- result
+
+--  hour	order_count
+--  11		1231
+--  12		2520
+--  13		2455
+--  14		1472
+--  15		1468
+--  16		1920
+--  17		2336
+--  18		2399
+--  19		2009
+--  20		1642
+--  21		1198
+--  22		663
+--  23		28
+--  10      8
+--  9		1
